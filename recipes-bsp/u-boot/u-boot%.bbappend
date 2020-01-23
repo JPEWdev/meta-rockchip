@@ -1,3 +1,7 @@
+FILESEXTRAPATHS_prepend := "${THISDIR}/u-boot:"
+
+SRC_URI_append = " file://0001-rk3399-rock-pi-4-Lower-serial-baud.patch"
+
 do_compile_append_rock2-square () {
 	# copy to default search path
 	if [ "${SPL_BINARY}" = "u-boot-spl-dtb.bin" ]; then
